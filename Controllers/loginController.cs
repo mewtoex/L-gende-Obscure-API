@@ -1,4 +1,6 @@
-﻿using Légende_Obscure.Services;
+﻿using Légende_Obscure.Model;
+using Légende_Obscure.Services;
+using Légende_Obscure.Util.ModelDB;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -14,7 +16,12 @@ namespace Légende_Obscure.Controllers
     public class loginController : ControllerBase
     {
         TokenService tServcie = new TokenService();
+        private readonly LoginDB _loginService;
 
+        public loginController(LoginDB loginService)
+        {
+            _loginService = loginService;
+        }
 
         [HttpGet("{id}")]
         public OkObjectResult Get(string id)
@@ -25,29 +32,33 @@ namespace Légende_Obscure.Controllers
         }
 
 
-        [HttpGet("testAuthorize")]
-        [Authorize]
+        [HttpGet("testE")]
         public OkObjectResult Get2(int id)
         {
-          
-            return Ok(new { Teste ="M"});
+
+            var result = _loginService.BuscarTodos();
+            return Ok(new { Teste = result });
 
         }
 
-        [HttpPost]
+
+        [HttpGet("testAuthorize")]
         [Authorize]
-        public void Post([FromBody] string value)
+        public OkObjectResult Get12(int id)
         {
+
+            return Ok(new { Teste = "M" });
+
         }
 
 
-        [HttpPost("{id}")]
+        [HttpPost("logar")]
         [Authorize]
-        public string Post2([FromBody] string value)
+        public OkObjectResult Post(User value)
         {
-            return "";
-        }
+            return Ok(new { Teste = "M" });
 
+        }
 
     }
 }

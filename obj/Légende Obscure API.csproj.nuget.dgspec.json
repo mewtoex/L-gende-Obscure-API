@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Estudo Progamação\\Légende Obscure\\Légende Obscure\\Légende Obscure API.csproj": {}
+    "D:\\Estudo Progamação\\Legende Obscure\\Legende Obscure\\Légende Obscure API.csproj": {}
   },
   "projects": {
-    "D:\\Estudo Progamação\\Légende Obscure\\Légende Obscure\\Légende Obscure API.csproj": {
+    "D:\\Estudo Progamação\\Legende Obscure\\Legende Obscure\\Légende Obscure API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Estudo Progamação\\Légende Obscure\\Légende Obscure\\Légende Obscure API.csproj",
+        "projectUniqueName": "D:\\Estudo Progamação\\Legende Obscure\\Legende Obscure\\Légende Obscure API.csproj",
         "projectName": "Légende Obscure API",
-        "projectPath": "D:\\Estudo Progamação\\Légende Obscure\\Légende Obscure\\Légende Obscure API.csproj",
+        "projectPath": "D:\\Estudo Progamação\\Legende Obscure\\Legende Obscure\\Légende Obscure API.csproj",
         "packagesPath": "C:\\Users\\Tobi\\.nuget\\packages\\",
-        "outputPath": "D:\\Estudo Progamação\\Légende Obscure\\Légende Obscure\\obj\\",
+        "outputPath": "D:\\Estudo Progamação\\Legende Obscure\\Legende Obscure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tobi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.23, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.12, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

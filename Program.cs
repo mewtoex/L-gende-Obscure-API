@@ -1,8 +1,13 @@
+using Légende_Obscure.Util;
+using Légende_Obscure.Util.ModelDB;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=LegendeObscure;Trusted_Connection=True;MultipleActiveResultSets=true;"));
+builder.Services.AddScoped<LoginDB>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
